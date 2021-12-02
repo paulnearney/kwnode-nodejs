@@ -16,6 +16,22 @@ To get started with PubSub sign up for the free tier over at [Google Cloud](http
 Edit `config.json` with the smart contract addresses you want to watch, as well as the PubSub topics to publish the 
 transactions to.
 
+Example config:
+```json
+{
+  "websocketEndpoint": "wss://ws.s0.t.hmny.io/",
+  "pollInterval": 1000,
+  "stateFilename": "./state.json",
+  "contracts": [
+    {
+      "address": "0x5100bd31b822371108a0f63dcfb6594b9919eaf4",
+      "pubSubTopic": "yourTopic",
+      "firstBlock": 19875503
+    }
+  ]
+}
+```
+
 Provide credentials for PubSub through the `ENV_NAME` environment variable.
 
 ### Future plans
